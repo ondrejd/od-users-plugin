@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: odUsersPlugin
-Plugin URI: https://wordpress.org/plugins/od-users-plugin/
-Description: ...
+Plugin Name: ondrejd's Users Plugin
+Plugin URI: https://github.com/ondrejd/od-users-plugin/
+Description: WordPress plug-in for managing contact forms and users.
 Version: 0.1
 Author: Ondřej Doněk
 Author URI: http://ondrejdonek.blogspot.cz/
@@ -48,7 +48,28 @@ class odWpUsersPlugin extends \odwp\SimplePlugin
 		'save_contacts_as_users' => true,
 		'send_welcome_email' => true
 	);
-	// ...
+	protected $admin_menu_position = 12;
+    protected $enable_default_options_page = true;
+
+    /**
+     * Returns title of the plug-in.
+     *
+     * @since 0.1
+     * @param string $suffix (Optional.)
+     * @param string $sep (Optional.)
+     * @return string
+     */
+    public function get_title($suffix = '', $sep = ' - ') {
+		if (empty($suffix)) {
+			return __('Contacts and Users', $this->get_textdomain());
+		}
+
+		return sprintf(
+			__('Contacts and Users%s%s', $this->get_textdomain()),
+			$sep,
+			$suffix
+		);
+	}
 } // End of odWpUsersPlugin
 
 // ===========================================================================
