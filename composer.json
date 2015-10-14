@@ -1,7 +1,7 @@
 {
 	"name": "ondrejd/od-users-plugin",
-	"description": "...",
-	"homepage": "https://wordpress.org/plugins/od-users-plugin/",
+	"description": "WordPress plug-in for managing contact forms and users.",
+	"homepage": "https://github.com/ondrejd/od-users-plugin",
 	"type": "plugin",
 	"license": "MPL-2.0",
 	"keywords": ["wordpress","plugin"],
