@@ -44,12 +44,40 @@ class odWpUsersPlugin extends \odwp\SimplePlugin
 	protected $id = 'od-users-plugin';
 	protected $version = '0.1';
 	protected $textdomain = 'od-users-plugin';
-	protected $options = array(
-		'save_contacts_as_users' => true,
-		'send_welcome_email' => true
-	);
 	protected $admin_menu_position = 12;
     protected $enable_default_options_page = true;
+
+	/**
+	 * Constructor.
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		$this->init_locales();
+
+		$this->options = array();
+		$this->options[] = new \odwp\PluginOption(
+			'save_contacts_as_users',
+			__('Save contacts as users', $this->get_textdomain()),
+			\odwp\PluginOption::TYPE_BOOL,
+			true
+		);
+		$this->options[] = new \odwp\PluginOption(
+			'send_welcome_email',
+			__('Send welcome email', $this->get_textdomain()),
+			\odwp\PluginOption::TYPE_BOOL,
+			true
+		);
+		$this->options[] = new \odwp\PluginOption(
+			'send_welcome_email_template',
+			__('Welcome email template', $this->get_textdomain()),
+			\odwp\PluginOption::TYPE_STRING,
+			'default',
+			__('Test description…', $this->get_textdomain())
+		);
+
+		parent::__construct();
+	}
 
     /**
      * Returns title of the plug-in.
