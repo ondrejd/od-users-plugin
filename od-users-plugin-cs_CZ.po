@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: od-users-plugin\n"
+"POT-Creation-Date: 2015-10-14 05:15+0100\n"
+"PO-Revision-Date: 2015-10-14 05:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: Ondřej Doněk <ondrejd@gmail.com>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: ./vendor\n"
+
+#: od-users-plugin.php:64
+msgid "Contacts and Users"
+msgstr "Kontakty a uživatelé"
+
+#: od-users-plugin.php:68
+#, php-format
+msgid "Contacts and Users%s%s"
+msgstr "Kontakty a uživatelé%s%s"
+
+#: vendor/ondrejd/odwp/src/SimplePlugin.php:446
+#: vendor/ondrejd/odwp/src/SimplePlugin.php:479
+msgid "Settings"
+msgstr "Nastavení"
